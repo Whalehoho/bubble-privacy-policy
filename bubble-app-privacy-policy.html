@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - Bubble App Launcher</title>
+  <link rel="icon" type="image/webp" href="favicon.webp" />
+
+  <!-- Elegant font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: linear-gradient(to bottom right, #b3e5fc, #d1c4e9);
+      --header-color: #0d1b3d;
+      --text-color: #0d1b3d;
+      --accent: #80d8ff;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      overflow-y: auto;
+      min-height: 100vh;
+    }
+
+    .bubbles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.05));
+      animation: float 20s infinite ease-in-out;
+      opacity: 1;
+      filter: blur(4px);
+    }
+
+    .bubble:nth-child(1) { width: 160px; height: 160px; top: 10%; left: 5%; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 240px; height: 240px; top: 30%; left: 65%; animation-delay: 4s; }
+    .bubble:nth-child(3) { width: 180px; height: 180px; top: 60%; left: 15%; animation-delay: 8s; }
+    .bubble:nth-child(4) { width: 140px; height: 140px; top: 80%; left: 75%; animation-delay: 2s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-40px) rotate(180deg); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      max-width: 800px;
+      margin: 5rem auto;
+      padding: 3rem;
+      width: 90%;
+      color: var(--text-color);
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--header-color);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.6rem;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-color);
+    }
+
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: #0d1b3d;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #0d1b3d;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 2rem;
+        margin: 2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="date"><strong>Effective Date:</strong> April 6, 2025</p>
+
+    <p><strong>Bubble App Launcher</strong> respects your privacy. This app does not collect, store, or share any personal information. All user settings are stored locally on the device.</p>
+
+    <h2>1. App Functionality</h2>
+    <p>The app displays a floating bubble on your screen. When tapped, it shows a 3x3 pattern lock screen. Drawing a valid pattern launches the user’s assigned app. All configurations are stored locally using Android's SharedPreferences.</p>
+
+    <h2>2. Permissions</h2>
+    <ul>
+      <li><strong>SYSTEM_ALERT_WINDOW</strong> – Required to display the floating bubble over other apps.</li>
+      <li><strong>QUERY_ALL_PACKAGES</strong> or usage access – Used to list apps so you can assign them to patterns.</li>
+    </ul>
+
+    <h2>3. Data Collection</h2>
+    <p>This app does not collect or transmit any data externally. No analytics or third-party SDKs are used. Pattern data and app shortcut preferences remain on your device only.</p>
+
+    <h2>4. Third-Party Access</h2>
+    <p>This app does not share data with any third parties.</p>
+
+    <h2>5. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy in the future. Any changes will be reflected on this page and in future updates.</p>
+
+    <h2>6. Contact</h2>
+    <p>If you have any questions or feedback, please contact us at: <a href="mailto:laukahchuan012@gmail.com">laukahchuan012@gmail.com</a></p>
+  </div>
+</body>
+</html>
